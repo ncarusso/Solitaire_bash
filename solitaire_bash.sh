@@ -38,9 +38,9 @@ COMMENT1
 #echo "The complete deck of cards is: " ${deck[*]}
 #echo "The Wildcards are: " $jokerA "and" $jokerB
 
-echo "############################################################################################################"
-echo "### Welcome to Bash implementation of Bruce Schneier's Solitaire Encryption Algorithm by Nicolas Carusso ###"
-echo "############################################################################################################"
+echo "#########################################################################################"
+echo "### Welcome to Bash implementation of Bruce Schneier's Solitaire Encryption Algorithm ###"
+echo "#########################################################################################"
 echo "#"
 echo "Please select one of the following options"
 echo "1) Encrypt"
