@@ -3,7 +3,7 @@
 ###############################################
 # Author: Nicolas Carusso                     #
 # Author's email: ncarusso at gmail dot com   #
-# Date: /05/2015                            #
+# Date: /May and June/2015                    #
 ###############################################
 
 source external_functions_for_solitaire_bash.sh
@@ -12,7 +12,7 @@ source external_functions_for_solitaire_bash.sh
 	   Bash implementation of Bruce Schneier's Solitaire Encryption Algorithm (http://www.counterpane.com/solitaire.html). I only used bash commands
 	   to write this script in order to maximize its compatibility with linux distros
 
-           TESTED IN: debian/Ubuntu/ Mac OSX /Windows + CygWin...
+           TESTED IN: debian/Ubuntu/ Mac OSX 10.6.8 /Windows + CygWin...
 
 COMMENT1
 
@@ -20,7 +20,7 @@ COMMENT1
 ## DECK OF CARDS
 ##################################################################
 # The deck had been constructed according to the following directives:
-#Suit_card
+# Suit_card
 #For Example:  A Clubs is C_A and Queen of Spades is S_Q
 
 #  1, 2,...,13 are A,2,...,K of clubs

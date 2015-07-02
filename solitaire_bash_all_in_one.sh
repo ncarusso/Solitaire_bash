@@ -1,12 +1,43 @@
 #!/bin/bash 
 
+###############################################
+# Author: Nicolas Carusso                     #
+# Author's email: ncarusso at gmail dot com   #
+# Date: /May and June/2015                    #
+###############################################
+
+<<COMMENT1
+     Bash implementation of Bruce Schneier's Solitaire Encryption Algorithm (http://www.counterpane.com/solitaire.html). I only used bash commands
+     to write this script in order to maximize its compatibility with linux distros
+
+           TESTED IN: debian/Ubuntu/ Mac OSX 10.6.8 /Windows + CygWin...
+
+COMMENT1
+
+##################################################################
+## DECK OF CARDS
+##################################################################
+# The deck had been constructed according to the following directives:
+# Suit_card
+#For Example:  A Clubs is C_A and Queen of Spades is S_Q
+
+#  1, 2,...,13 are A,2,...,K of clubs
+# 14,15,...,26 are A,2,...,K of diamonds
+# 27,28,...,39 are A,2,...,K of hearts
+# 40,41,...,52 are A,2,...,K of spades
+#C = Clubs
+#D = Diamonds
+#H = Hearts
+#S = Spades
+#J = Jack
+#Q = Queen
+#K = king
+
 deck_original=(C_A C_2 C_3 C_4 C_5 C_6 C_7 C_8 C_9 C_10 C_J C_Q C_K D_A D_2 D_3 D_4 D_5 D_6 D_7 D_8 D_9 D_10 D_J D_Q D_K H_A H_2 H_3 H_4 H_5 H_6 H_7 H_8 H_9 H_10 H_J H_Q H_K S_A S_2 S_3 S_4 S_5 S_6 S_7 S_8 S_9 S_10 S_J S_Q S_K A_Joker B_Joker)
 deck=(C_A C_2 C_3 C_4 C_5 C_6 C_7 C_8 C_9 C_10 C_J C_Q C_K D_A D_2 D_3 D_4 D_5 D_6 D_7 D_8 D_9 D_10 D_J D_Q D_K H_A H_2 H_3 H_4 H_5 H_6 H_7 H_8 H_9 H_10 H_J H_Q H_K S_A S_2 S_3 S_4 S_5 S_6 S_7 S_8 S_9 S_10 S_J S_Q S_K A_Joker B_Joker)
 jokerA=A_Joker
 jokerB=B_Joker
-#echo "original deck is:" ${deck[@]}
-#echo "Joker A is: " $jokerA
-#echo "Joker B is: " $jokerB
+
 
 #Create two arrays with brace expansion
 letters=({A..Z})
@@ -572,6 +603,8 @@ echo "Decrypted message is: " $ciphertext_string_separated_in_groups
 ########################################################################
 ########################################################################
 
+
+
 function test_vectors () {
 
 plaintexts_vector=("AAAAAAAAAAAAAAA" "AAAAAAAAAAAAAAA" "AAAAAAAAAAAAAAA" "AAAAAAAAAAAAAAA" "AAAAAAAAAAAAAAA" "AAAAAAAAAAAAAAA" "AAAAAAAAAAAAAAA" "AAAAAAAAAAAAAAA" "AAAAAAAAAAAAAAA" "AAAAAAAAAAAAAAA" "AAAAAAAAAAAAAAAAAAAAAAAAA" "SOLITAIRE")
@@ -614,6 +647,7 @@ done
 ########################################################################
 ########################################################################
 ########################################################################
+
 
 function generate_random_string_for_consistency_check () {
 
@@ -659,3 +693,43 @@ decrypt
    fi
 
 }
+########################################################################
+########################################################################
+########################################################################
+#### Solitaire's body                                               ####
+########################################################################
+########################################################################
+########################################################################
+
+
+echo "#########################################################################################"
+echo "### Welcome to Bash implementation of Bruce Schneier's Solitaire Encryption Algorithm ###"
+echo "#########################################################################################"
+echo "#"
+echo "Please select one of the following options"
+echo "1) Encrypt"
+echo "2) Decrypt"
+echo "3) Run test vectors"
+echo "4) Cipher consistency check"
+echo -n "Option: "
+
+read option
+
+
+
+case $option in
+
+1)
+  enter_message
+  encrypt;;
+2)
+  enter_message
+  decrypt;;
+3)
+  test_vectors;;
+4)
+  cipher_consistency_check;;
+*)
+  echo "You entered an invalid option";;
+
+esac
