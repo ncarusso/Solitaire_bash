@@ -67,4 +67,5 @@ NOTE. It is not neccessary to grant execution permissions to the external functi
 <ul>
 <li><a href=https://www.schneier.com/solitaire.html>Schneier on Security - The Solitaire Encryption Algorithm</a> 
 <li><a href=https://www.schneier.com/code/sol-test.txt>Test Vectors</a> 
+<li><a href=https://www.coursera.org/course/crypto>Stanford Cryptography I</a> 
 </ul>
