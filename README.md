@@ -14,24 +14,57 @@ In Neal Stephenson's novel Cryptonomicon, the character Enoch Root describes a c
 Basically, this script is divided in four main functions:
 <OL>
 <li> <b> Encrypt </b>
-<<li> <b> Decrypt </b>
+<li> <b> Decrypt </b>
 <li> <b> Test vectors </b>
 I have uploaded the test vectors provided in Schneier's web site (see references). The bash script takes both the plaintext and the key of each test vector and performs first and encrypt operation. The resulting ciphertext is then decrypted using the same key. Finally, if the obtained plaintext is equal to the vector's plaintext the test is successful. 
 <li> <b> Cipher consistency check </b>
 Solitaire is an output-feedback mode stream cipher. Solitaire is a Symmetric cipher, which means that the key used to encrypt is the same key that is needed to obtain the original plaintext. The Symmetric ciphers definition
 A cipher defined over (K, M, C) is a pair of “efficient” algorithms (E, D) where
 
-E: M,K -> C 
-D: C,K -> M
+E: M,K -> C <br>
+D: C,K -> M <br>
 
-K - key space
-M - message space
-C - cipher text
-E - encryption algorithm
-D - decryption algorithm
-The requirement is that the algorithms are <b>consistent </b> (satisfy correctness property). the consistency equation, which all ciphers must satisfy is the following:
-
-D(k, E(k,m))=m
-
+K - key space <br>
+M - message space <br>
+C - cipher text <br>
+E - encryption algorithm <br>
+D - decryption algorithm <br>
+The requirement is that the algorithms are <b>consistent </b> (satisfy correctness property). the consistency equation, which all ciphers must satisfy is the following:<br>
+<br>
+D(k, E(k,m))=m<br>
+<br>
 The scripts simply verifies this equation in every execution by creating two RANDOM arrays, the key and the message.
 </OL>
+
+<h3>Script Execution instructions</h3>
+You have two different options to run solitaire implementation in bash: <br>
+<ul>
+<li> solitaire_bash.sh and external_functions_for_solitaire_bash.sh <br>
+<li> solitaire_bash_all_in_one.sh
+</ul>
+Although both versions behave equally, the first version is easier to read because it presents the functions separated from the main body of the script. The external functions are invoqued with the bash <k>source </k> command. It is important to notice that both files must be in the same directory for solitaire to be executed.
+
+
+To run the script you must grant execution permissions to the user by doing<br>
+
+<code>chmod +x solitaire_bash.sh</code><br> 
+
+or <br>
+
+<code>chmod +x solitaire_bash_all_in_one.sh</code><br> 
+
+and then
+
+<code> ./solitaire_bash.sh.sh </code>
+
+or <br>
+
+<code> ./solitaire_bash_all_in_one.sh</code><br>
+
+NOTE. It is not neccesary to grant execution permissions to the external functions file. <br>
+
+<i>References</i>
+<ul>
+<li><a href=https://www.schneier.com/solitaire.html>Schneier on Security - The Solitaire Encryption Algorithm</a> 
+<li><a href=https://www.schneier.com/code/sol-test.txt>Test Vectors</a> 
+</ul>
