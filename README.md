@@ -18,8 +18,8 @@ Basically, this script is divided in four main functions:
 <li> <b> Test vectors </b>
 I have uploaded the test vectors provided in Schneier's web site (see references). The bash script takes both the plaintext and the key of each test vector and performs first and encrypt operation. The resulting ciphertext is then decrypted using the same key. Finally, if the obtained plaintext is equal to the vector's plaintext the test is successful. 
 <li> <b> Cipher consistency check </b>
-Solitaire is an output-feedback mode stream cipher. Solitaire is a Symmetric cipher, which means that the key used to encrypt is the same key that is needed to obtain the original plaintext. The Symmetric ciphers definition
-A cipher defined over (K, M, C) is a pair of “efficient” algorithms (E, D) where
+Solitaire is an output-feedback mode stream cipher. Solitaire is a Symmetric cipher, which means that the key used to encrypt is the same key that is needed to obtain the original plaintext. In the Symmetric ciphers definition,
+a cipher defined over (K, M, C) is a pair of “efficient” algorithms (E, D) where
 
 E: M,K -> C <br>
 D: C,K -> M <br>
@@ -42,7 +42,7 @@ You have two different options to run solitaire implementation in bash: <br>
 <li> solitaire_bash.sh and external_functions_for_solitaire_bash.sh <br>
 <li> solitaire_bash_all_in_one.sh
 </ul>
-Although both versions behave equally, the first version is easier to read because it presents the functions separated from the main body of the script. The external functions are invoqued with the bash <k>source </k> command. It is important to notice that both files must be in the same directory for solitaire to be executed.
+Although both versions behave equally, the first version is easier to read because it presents the functions separated from the main body of the script. The external functions are invoked with the bash <k>source </k> command. It is important to notice that both files must be in the same directory for solitaire to be executed.
 
 
 To run the script you must grant execution permissions to the user by doing<br>
@@ -61,7 +61,7 @@ or <br>
 
 <code> ./solitaire_bash_all_in_one.sh</code><br>
 
-NOTE. It is not neccesary to grant execution permissions to the external functions file. <br>
+NOTE. It is not neccessary to grant execution permissions to the external functions file. <br>
 
 <i>References</i>
 <ul>
