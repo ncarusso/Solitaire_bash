@@ -19,14 +19,14 @@ Basically, this script is divided in four main functions:
 I have uploaded the test vectors provided in Schneier's web site (see references). The bash script takes both the plaintext and the key of each test vector and performs first and encrypt operation. The resulting ciphertext is then decrypted using the same key. Finally, if the obtained plaintext is equal to the vector's plaintext the test is successful. 
 <li> <b> Cipher consistency check </b>
 Solitaire is an output-feedback mode stream cipher. Solitaire is a Symmetric cipher, which means that the key used to encrypt is the same key that is needed to obtain the original plaintext. In the Symmetric ciphers definition,
-a cipher defined over (K, M, C) is a pair of “efficient” algorithms (E, D) where <br>
+a cipher defined over (k, m, c) is a pair of “efficient” algorithms (E, D) where <br>
 
-E: M,K -> C <br>
-D: C,K -> M <br>
+E: m,k -> c <br>
+D: c,k -> m <br>
 
-K - key space <br>
-M - message space <br>
-C - cipher text <br>
+k - key space <br>
+m - message space <br>
+c - cipher text <br>
 E - encryption algorithm <br>
 D - decryption algorithm <br>
 The requirement is that the algorithms are <b>consistent </b> (satisfy correctness property). the consistency equation, which all ciphers must satisfy is the following:<br>
@@ -55,7 +55,7 @@ or <br>
 
 and then
 
-<code> ./solitaire_bash.sh.sh </code>
+<code> ./solitaire_bash.sh </code>
 
 or <br>
 
