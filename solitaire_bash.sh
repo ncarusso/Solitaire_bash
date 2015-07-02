@@ -9,7 +9,7 @@
 source external_functions_for_solitaire_bash.sh
 
 <<COMMENT1
-	   Bash implementation of Bruce Schneier's Solitaire Encryption Algorithm (http://www.counterpane.com/solitaire.html). I only used bash commands
+	   Bash implementation of Bruce Schneier's Solitaire Encryption Algorithm (https://www.schneier.com/solitaire.html). I only used bash commands
 	   to write this script in order to maximize its compatibility with linux distros
 
            TESTED IN: debian/Ubuntu/ Mac OSX 10.6.8 /Windows + CygWin...
