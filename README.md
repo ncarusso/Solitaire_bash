@@ -42,7 +42,7 @@ You have two different options to run solitaire implementation in bash: <br>
 <li> solitaire_bash.sh and external_functions_for_solitaire_bash.sh <br>
 <li> solitaire_bash_all_in_one.sh
 </ul>
-Although both versions behave equally, the first version is easier to read because it presents the functions separated from the main body of the script. The external functions are invoked with the bash <k>source </k> command. It is important to notice that both files must be in the same directory for solitaire to be executed.
+Although both versions behave almost equally, the first version is easier to read because it presents the functions separated from the main body of the script. The external functions are invoked with the bash <k>source </k> command. It is important to notice that both files must be in the same directory for solitaire to be executed.
 
 
 To run the script you must grant execution permissions to the user by doing<br>
