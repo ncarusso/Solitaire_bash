@@ -9,7 +9,7 @@ I have tested it in several operating systems such as Linux debian/Ubuntu, Mac O
 
 In Neal Stephenson's novel Cryptonomicon, the character Enoch Root describes a cryptosystem code-named "Pontifex" to another character named Randy Waterhouse, and later reveals that the steps of the algorithm are intended to be carried out using a deck of playing cards. These two characters go on to exchange several encrypted messages using this system. The system is called "Solitaire" (in the novel, "Pontifex" is a code name intended to temporarily conceal the fact that it employs a deck of cards) and It was designed to allow field agents to communicate securely without having to rely on electronics or having to carry incriminating tools. An agent might be in a situation where he just does not have access to a computer, or may be prosecuted if he has tools for secret communication. 
 
-<h4>About This Bash implementation</h4>
+<h4>About the Bash implementation</h4>
 
 Basically, this script is divided in four main functions:
 <OL>
