@@ -1,6 +1,6 @@
 <h1> The Solitaire Encryption Algorithm in Bash </h1>
 
-This is Bruce Schneier Solitaire's Encryption Algorithm coded in bash. For portability and efficiency purposes, I only use bash internal commands to write this script. 
+This is Bruce Schneier's Solitaire Encryption Algorithm coded in bash. For portability and efficiency purposes, I only use bash internal commands to write this script. 
 I have tested it in several operating systems such as Linux debian/Ubuntu, Mac OSX 10.6.8, and even in Windows with Cygwin (in order to port bash).
 
 <HR>
