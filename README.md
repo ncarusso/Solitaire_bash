@@ -25,7 +25,7 @@ E: m,k -> c <br>
 D: c,k -> m <br>
 <br>
 k - key space <br>
-m - message space <br>
+m - message <br>
 c - cipher text <br>
 E - encryption algorithm <br>
 D - decryption algorithm <br><br>
