@@ -38,7 +38,6 @@ function move_1_card_down_aux () {
                         aux=${deck_after_step_1[i]}
                         deck_after_step_1[$i]=${deck_after_step_1[i+1]}
                         deck_after_step_1[$i+1]=$aux
-                        break
            fi
 
 }
